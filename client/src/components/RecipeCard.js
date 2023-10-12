@@ -22,7 +22,6 @@ const navigate = useNavigate()
         }
       )
       .then((response) => {
-        // Check if the request was successful
         if (response.status === 201) {
           toast({
             position: "top",

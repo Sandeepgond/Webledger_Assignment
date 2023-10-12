@@ -9,7 +9,7 @@ favouriteRecipeRouter.post("/", auth, async (req, res) => {
   try {
     const { user } = req;
     const { id } = req.body;
- 
+
     const response = await axios.get(
       `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.API_KEY}`
     );
@@ -20,7 +20,7 @@ favouriteRecipeRouter.post("/", auth, async (req, res) => {
         .status(400)
         .send({ error: "Invalid recipe data from Spoonacular" });
     }
-    
+
 
     const existingfavourite = await favouriteRecipeModel.findOne({
       user: user._id,
@@ -65,7 +65,7 @@ favouriteRecipeRouter.get("/", auth, async (req, res) => {
 
 // // Delete Favourite Recipe
 
-favouriteRecipeRouter.delete("/:id",auth,async(req,res)=>{
+favouriteRecipeRouter.delete("/:id", auth, async (req, res) => {
   const favoriteRecipeId = req.params.id;
   try {
     // Check if the favorite recipe exists
@@ -82,7 +82,7 @@ favouriteRecipeRouter.delete("/:id",auth,async(req,res)=>{
 
     // If the checks pass, delete the favorite recipe
     await favouriteRecipeModel.findByIdAndDelete(favoriteRecipeId);
-    
+
     // Respond with a success status
     res.status(204).send();
   } catch (error) {
@@ -91,4 +91,4 @@ favouriteRecipeRouter.delete("/:id",auth,async(req,res)=>{
 })
 
 
-module.exports = {favouriteRecipeRouter}
+module.exports = { favouriteRecipeRouter }

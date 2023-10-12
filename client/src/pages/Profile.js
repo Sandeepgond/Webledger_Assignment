@@ -45,13 +45,12 @@ const Profile = () => {
   const handleDeleteFavourite = async (id) => {
     try {
       // console.log(Token,"inside delete")
-      // Send a DELETE request to your backend API to delete the favorite recipe
       await axios.delete(`https://webledgerrecipeapi.onrender.com/favourite/${id}`,{
         headers: {
           Authorization: `Bearer ${Token}`,
           },
         });
-        // Show a success toast
+      
         toast({
           position: "top",
           title: "Favorite recipe deleted",
@@ -61,9 +60,7 @@ const Profile = () => {
         });
        getFavouriteRecipies()
     } catch (error) {
-      // Handle any errors here
       console.error("deleting favorite recipe Error:", error);
-      // Show an error toast
       toast({
         position: "top",
         title: "Error deleting favorite recipe",
