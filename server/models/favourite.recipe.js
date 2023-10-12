@@ -9,13 +9,9 @@ const favouriteRecipeSchema = new mongoose.Schema({
   recipe: {
     type: Object,
   },
+  createdAt: { type: Date, default: Date.now } 
 });
 
-const favouriteRecipeModel = mongoose.model(
-  "favouriteRecipe",
-  favouriteRecipeSchema
-);
+const favouriteRecipeModel = mongoose.model("favouriteRecipe",favouriteRecipeSchema);
 
-module.exports = {
-  favouriteRecipeModel,
-};
+module.exports = {favouriteRecipeModel}

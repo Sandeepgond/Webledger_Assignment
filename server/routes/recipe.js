@@ -8,7 +8,7 @@ recipeRouter.get("/", async (req, res) => {
   try {
     // Make a GET request to the Spoonacular API
     const response = await axios.get(
-      `https://api.spoonacular.com/recipes/random?apiKey=${process.env.API_KEY}&number=20`
+      `https://api.spoonacular.com/recipes/random?apiKey=${process.env.API_KEY}&number=25`
     );
 
     // Extract the recipe data from the response

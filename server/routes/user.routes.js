@@ -1,12 +1,11 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
-const bcrypt = require("bcrypt");
 const { UserModel } = require("../models/user.model");
+const bcrypt = require("bcrypt");
 
 const userRouter = express.Router();
 
-// user register route
 userRouter.post("/register", async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -25,7 +24,6 @@ userRouter.post("/register", async (req, res) => {
 
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, 5);
-
     // create New User
     const newUser = new UserModel({ name, email, password: hashedPassword });
 
@@ -52,7 +50,6 @@ userRouter.post("/login", async (req, res) => {
     if (!user) {
       res.status(401).send({ message: "Wrong Credentials!" });
     }
-
     const passwordMatch = await bcrypt.compare(password, user.password);
 
     if (passwordMatch) {
@@ -73,6 +70,4 @@ userRouter.post("/login", async (req, res) => {
   }
 });
 
-module.exports = {
-  userRouter,
-};
+module.exports = {userRouter};
