@@ -59,6 +59,7 @@ const Profile = () => {
           duration: 3000,
           isClosable: true,
         });
+       getFavouriteRecipies()
     } catch (error) {
       // Handle any errors here
       console.error("deleting favorite recipe Error:", error);
