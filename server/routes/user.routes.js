@@ -15,7 +15,6 @@ userRouter.post("/register", async (req, res) => {
       res.status(400).send({ error: "Name, email, and password are required" });
     }
 
-    // check if user with same email already exist
     const existingUser = await UserModel.findOne({ email });
 
     if (existingUser) {
@@ -26,8 +25,6 @@ userRouter.post("/register", async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 5);
     // create New User
     const newUser = new UserModel({ name, email, password: hashedPassword });
-
-    // Save the user to the database
     await newUser.save();
 
     res
