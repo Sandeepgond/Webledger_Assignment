@@ -27,8 +27,6 @@ The Recipe Application is a web-based platform that allows users to explore and 
 - Authentication: JWT (JSON Web Token)
 - API Integration: Spoonacular API for recipe data
 
-## Project Structure
-
 
 ## Installation
 
@@ -52,20 +50,7 @@ The Recipe Application is a web-based platform that allows users to explore and 
    mongoURL=<your-mongodb-url>
    JWT_SECRET_KEY=<your-secret-key>
    API_KEY=<your-spoonacular-api-key>  ';
-   
-5. Start the frontend and backend servers:
- - Frontend:
-    ```sh
-    cd client
-    npm start
-    ```
 
-- Backend:
-  ```sh
-    cd server
-    npm start
-  ```
-6. Access the application in your web browser at http://localhost:8080.
 
 ### Usage
 - Users can sign up for an account or log in with existing credentials.
