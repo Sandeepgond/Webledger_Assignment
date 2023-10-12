@@ -1,5 +1,5 @@
 
-# Recipe Application
+# Recipe App
 
 ### Overview
 The Recipe Application is a web-based platform that allows users to explore and manage their favorite recipes. Users can view recipe details, add recipes to their favorites, and delete recipes from their favorites.
