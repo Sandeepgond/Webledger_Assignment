@@ -24,7 +24,6 @@ const navigate = useNavigate()
       .then((response) => {
         // Check if the request was successful
         if (response.status === 201) {
-          // Showing success toast
           toast({
             position: "top",
             title: "Recipe added to favourites!",
@@ -35,7 +34,6 @@ const navigate = useNavigate()
           });
         }
         if (response.status === 401) {
-          // Showing error toast
           toast({
             position: "top",
             title: "Please Login First!",
@@ -46,7 +44,6 @@ const navigate = useNavigate()
           });
         }
         if (response.status === 409) {
-          // Showing error toast
           toast({
             position: "top",
             title: "Already add to the favourites!",
@@ -59,7 +56,6 @@ const navigate = useNavigate()
       })
       .catch((error) => {
         console.error("Error adding recipe to favourites:", error);
-        // Showing error toast
         toast({
           position: "top",
           title: "Please Login First!",

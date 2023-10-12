@@ -25,8 +25,7 @@ export default function Navbar({ onSearch }) {
   const [searchQuery, setSearchQuery] = useState("");
 
   const navigate = useNavigate();
-
-  const token = localStorage.getItem("token"); // tokens from loacal storage
+  const token = localStorage.getItem("token");
   const user = localStorage.getItem("user");
 
   useEffect(() => {
@@ -39,8 +38,7 @@ export default function Navbar({ onSearch }) {
 
   // search function
   const handleSearch = () => {
-    if (searchQuery.trim() !== "") {
-      // Invoke the provided onSearch callback with the search query
+    if (searchQuery.trim()!=="") {
       onSearch(searchQuery);
     }
   };
@@ -48,7 +46,6 @@ export default function Navbar({ onSearch }) {
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
-    // window.location.reload()
     navigate("/");
   };
   return (

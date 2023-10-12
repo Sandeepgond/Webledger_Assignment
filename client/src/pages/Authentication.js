@@ -51,7 +51,6 @@ const Authentication = () => {
             Log In
           </Box>
         </Flex>
-
         {isSignup ? <Signup /> : <Login />}
         <Button
           variant="link"

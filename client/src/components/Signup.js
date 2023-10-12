@@ -25,7 +25,7 @@ const Signup = () => {
         title: "Please fill all credentials",
         description: "All fields are required",
         status: "error",
-        duration: 5000,
+        duration: 4000,
         position: "top",
         isClosable: true,
       });
@@ -104,7 +104,6 @@ const Signup = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </FormControl>
-
             <Button type="submit" colorScheme="teal" mt={3}>
               Sign up
             </Button>

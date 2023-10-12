@@ -44,10 +44,8 @@ const Login = () => {
         body: JSON.stringify(userData),
       });
       let data = await res.json();
-
       setIsLoading(false);
       // console.log(userData, res);
-
       if (res.status === 200) {
         toast({
           title: "Login successful",
@@ -62,8 +60,6 @@ const Login = () => {
         setEmail("");
         setPassword("");
         navigate("/");
-
-        // console.log(data);
       } else {
         toast({
           title: "Login failed",

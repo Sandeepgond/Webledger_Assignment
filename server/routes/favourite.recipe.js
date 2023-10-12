@@ -8,13 +8,12 @@ const favouriteRecipeRouter = express.Router();
 favouriteRecipeRouter.post("/", auth, async (req, res) => {
   try {
     const { user } = req;
-    const { id } = req.body; // client sends the 'id' of the recipe
-
-    // Fetch recipe data from Spoonacular using the 'id'
+    const { id } = req.body;
+ 
     const response = await axios.get(
       `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.API_KEY}`
     );
-    const recipe = response.data; // contains recipe data
+    const recipe = response.data;
 
     if (!recipe || !recipe.id) {
       return res
@@ -22,7 +21,6 @@ favouriteRecipeRouter.post("/", auth, async (req, res) => {
         .send({ error: "Invalid recipe data from Spoonacular" });
     }
 
-    // Check if the recipe is already saved as a favourite by the user
     const existingfavourite = await favouriteRecipeModel.findOne({
       user: user._id,
       "recipe.id": recipe.id,
