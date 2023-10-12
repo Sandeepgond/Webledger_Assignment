@@ -20,15 +20,14 @@ The Recipe Application is a web-based platform that allows users to explore and 
 - Users have a profile page where they can view their favorite recipes.
 - They can also delete recipes from their favorites(To be implemented later).
 
-## Technology Stack
-- Frontend: React.js + Chakra-Ui
+## Tech Stack Used
+- Frontend: React.js + Chakra-Ui + React-router-dom
 - Backend: Node.js (Express.js)
 - Database: MongoDB
-- Authentication: JWT (JSON Web Tokens)
+- Authentication: JWT (JSON Web Token)
 - API Integration: Spoonacular API for recipe data
 
 ## Project Structure
-
 
 
 ## Installation
