@@ -16,7 +16,7 @@ The Recipe Application is a web-based platform that allows users to explore and 
 ![recipe search image](./images/home2.JPG)
 ### 3. Recipe Details
 - Users can view detailed information about a selected recipe, including ingredients, cooking instructions, and cooking time.
-![recipe deatils image](./images/recipe%20details.JPG)
+![recipe details image](./images/recipe%20details.JPG)
 
 ### 4. Favorite Recipes
 - Users can add recipes to their list of favorite recipes.
@@ -35,25 +35,22 @@ The Recipe Application is a web-based platform that allows users to explore and 
 - Authentication: JWT (JSON Web Token)
 - API Integration: Spoonacular API for recipe data
 
-
 ## Installation
 
 1. Clone the repository:
    
 2. Install frontend dependencies:
-   ```sh
+  
    cd client
    npm install
-   ```
+
 3. Install backend dependencies:
-   ```sh
+
    cd server
    npm install
-   ```
 
 
 4. Create a .env file in the server directory with the following variables:
-   ```js
    PORT=8080
    mongoURL=<your-mongodb-url>
    JWT_SECRET_KEY=<your-secret-key>
