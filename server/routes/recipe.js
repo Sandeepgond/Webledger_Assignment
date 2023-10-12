@@ -9,6 +9,7 @@ recipeRouter.get("/", async (req, res) => {
       `https://api.spoonacular.com/recipes/random?apiKey=${process.env.API_KEY}&number=25`
     );
 
+
     const recipes = response.data.recipes;
     res.status(200).send({ message: "data", recipes });
   } catch (error) {
@@ -27,7 +28,6 @@ recipeRouter.get("/search", async (req, res) => {
   const recipes = response.data.results;
   res.status(200).send({ message: "data", recipes });
 });
-
 
 recipeRouter.get("/:id", async (req, res) => {
   const { id } = req.params;

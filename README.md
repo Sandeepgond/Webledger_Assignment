@@ -8,17 +8,25 @@ The Recipe Application is a web-based platform that allows users to explore and 
 ### 1. User Authentication
 - Users can create accounts or log in with existing credentials.
 - Authentication is implemented using JWT (JSON Web Tokens) for secure access.
+![auth image](./images/auth.JPG)
+
 ### 2. Recipe Search
 - Users can search for recipes based on keywords, ingredients, or categories.
 - Recipe search utilizes the Spoonacular API to fetch recipe data.
+![recipe search image](./images/home2.JPG)
 ### 3. Recipe Details
 - Users can view detailed information about a selected recipe, including ingredients, cooking instructions, and cooking time.
+![recipe deatils image](./images/recipe%20details.JPG)
+
 ### 4. Favorite Recipes
 - Users can add recipes to their list of favorite recipes.
 - Favorite recipes are stored in the user's profile.
+![favourite recipe image](./images/profile.JPG)
+
 ### 5. Profile Page
 - Users have a profile page where they can view their favorite recipes.
 - They can also delete recipes from their favorites(To be implemented later).
+![favourite recipe image](./images/profile.JPG)
 
 ## Tech Stack Used
 - Frontend: React.js + Chakra-Ui + React-router-dom

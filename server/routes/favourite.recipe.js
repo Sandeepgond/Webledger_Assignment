@@ -20,6 +20,7 @@ favouriteRecipeRouter.post("/", auth, async (req, res) => {
         .status(400)
         .send({ error: "Invalid recipe data from Spoonacular" });
     }
+    
 
     const existingfavourite = await favouriteRecipeModel.findOne({
       user: user._id,
