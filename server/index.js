@@ -17,10 +17,10 @@ app.use("/favourite", favouriteRecipeRouter);
 app.listen(process.env.PORT, async () => {
   try {
     await connection;
-    console.log("Connected to DB!");
+    console.log("Connected to Database!");
   } catch (error) {
     console.log(error);
-    console.log("Not able to connect to DB!");
+    console.log("Not able to connect to Database!");
   }
   console.log(`Server running on Port ${process.env.PORT}`);
 });
