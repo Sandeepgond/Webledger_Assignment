@@ -4,11 +4,6 @@ import { AiFillDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const FavouriteRecipeCard = ({id,el, onDelete, }) => {
- 
-  // const handleDelete = () => {
-  //   console.log(el._id)
-  //   onDelete(el._id);
-  // };
 
   return (
     <Box boxShadow="2xl" rounded="md">
@@ -26,7 +21,6 @@ const FavouriteRecipeCard = ({id,el, onDelete, }) => {
             {el.recipe.title}
           </Heading>
         </Box>
-        
         <Box>
           <Button variant="outline" colorScheme="red">
             <AiFillDelete size={25} onClick={()=>onDelete(id)} color="red" />
