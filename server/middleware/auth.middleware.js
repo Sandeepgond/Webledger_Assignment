@@ -6,12 +6,11 @@ const auth = (req, res, next) => {
 
   if (token) {
     try {
-      const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY); // JWT secret key from environment variables
+      const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
       if (decoded) {
-      
         req.user = {
-          _id: decoded.authorId, //  user's ID
-          name: decoded.author,   //  user's name
+          _id: decoded.authorId, 
+          name: decoded.author,  
         };
         next();
       } else {
